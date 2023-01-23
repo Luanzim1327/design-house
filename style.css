@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) , url("./background-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+header nav h2 {
+    margin-left: 80px;
+}
+
+header nav ul {
+    display: flex;
+    margin-right: 50px;
+    padding: 20px 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+}
+
+header nav ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+/* content-banner */
+
+.content-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.content-banner h1 {
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.content-banner p {
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* buttons */
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+}
+
+.btn {
+    position: relative;
+
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid #009688;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.btn span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #009688;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.btn:hover span {
+    width: 100%;
+}
+
+.btn:hover {
+    border: none;
+}
